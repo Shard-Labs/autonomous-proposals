@@ -66,9 +66,15 @@ contract CrowdProposal {
         governor = governor_;
 
         terminated = false;
+    }
 
+    /// @notice Create governance proposal
+    function initDelegate(uint256 _compStakeAmount) external {
+        require(msg.sender == author, "Only owner can cal this function");
+        // Stake COMP and force proposal to delegate votes to itself
+        IComp(comp).transferFrom(msg.sender, address(this), _compStakeAmount);
         // Delegate votes to the crowd proposal
-        IComp(comp_).delegate(address(this));
+        IComp(comp).delegate(address(this));
     }
 
     /// @notice Create governance proposal

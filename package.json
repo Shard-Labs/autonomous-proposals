@@ -7,19 +7,29 @@
   "author": "Compound Labs, Inc.",
   "license": "BSD-3",
   "dependencies": {
-    "bignumber.js": "^9.0.0",
-    "eth-saddle": "0.1.21",
-    "web3": "^1.2.11"
+    "@ethersproject/bignumber": "^5.7.0",
+    "@typechain/ethers-v5": "^11.0.0",
+    "ether": "^0.0.9",
+    "hardhat": "^2.16.0"
   },
-  "scripts": {
-    "test": "./script/test",
-    "console": "npx -n --experimental-repl-await saddle console",
-    "compile": "npx saddle compile",
-    "deploy": "npx saddle deploy"
-  },
-  "resolutions": {
-    "**/ganache-core": "https://github.com/compound-finance/ganache-core.git#compound",
-    "scrypt.js": "https://registry.npmjs.org/@compound-finance/ethereumjs-wallet/-/ethereumjs-wallet-0.6.3.tgz",
-    "**/sha3": "^2.1.2"
+  "scripts": {},
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=12.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": ">=4.5.0"
   }
 }
